@@ -8,9 +8,21 @@ from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 from sklearn import svm
 from sklearn.metrics import accuracy_score
+import matplotlib.pyplot as plt
+import seaborn as sns
 
 # loading the dataset
 df = pd.read_csv('diabetes.csv')
+
+#heatmap
+plt.figure(figsize=(10,8))
+sns.heatmap(df.corr(), annot=True, cmap='coolwarm')
+plt.title('Diabetes Dataset Correlation Heatmap')
+plt.show()
+
+print(f"\nDataset Shape: {df.shape}")
+print(f"Total Records: {df.shape[0]}")
+print(f"Features: {df.shape[1]-1}")
 
 def line():
     print("="*60)
