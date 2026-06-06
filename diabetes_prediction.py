@@ -19,22 +19,22 @@ print("DIABETES PREDICTION USING MACHINE LEARNING")
 line()
 
 
-#print(df.head())
+print(df.head())
 
-#print(df.shape)
+print(df.shape)
 
-#print(df.describe())
+print(df.describe())
 
 cat= df['Outcome'].value_counts()
-#print(cat)
+print(cat)
 
-#print(df.groupby('Outcome').mean())
+print(df.groupby('Outcome').mean())
 
 # separating data and labels
 X = df.drop(columns='Outcome')
 Y = df['Outcome']   
-#print(X)
-#print(Y)
+print(X)
+print(Y)
 
 # data standardization
 
@@ -42,19 +42,19 @@ scaler = StandardScaler()
 scaler.fit(X)
 standardized_data = scaler.transform(X)
 
-#print(standardized_data)
+print(standardized_data)
 
 X = standardized_data
 Y = df['Outcome']
 
-#print(X)
-#print(Y)
+print(X)
+print(Y)
 
 
 # train test split
 
 X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size=0.2, stratify=Y, random_state=2)
-#print(X.shape, X_train.shape, X_test.shape)
+print(X.shape, X_train.shape, X_test.shape)
 
 
 # training the model
@@ -116,7 +116,7 @@ print(f"Testing Accuracy  : {test_data_accuracy*100:.2f}%")
 
 # changing the input data to a numpy array
 
-input_df = pd.DataFrame([input_data]) #type: ignore
+input_df = pd.DataFrame([input_data]) 
 input_data_scaled = scaler.transform(input_df)
 prediction = classifier.predict(input_data_scaled)
 print(prediction)
