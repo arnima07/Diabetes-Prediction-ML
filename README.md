@@ -4,7 +4,7 @@ A Machine Learning project that predicts whether a patient is likely to have dia
 
 ## Project Objective
 
-The goal of this project is to build a classification model using Logistic Regression that can predict diabetes based on patient health data. This project helps in understanding fundamental Machine Learning concepts and practical implementation.
+The goal of this project is to build a classification model using Support Vector Machin that can predict diabetes based on patient health data. This project helps in understanding fundamental Machine Learning concepts and practical implementation.
 
 ## Technologies Used
 
@@ -22,7 +22,7 @@ The goal of this project is to build a classification model using Logistic Regre
 3. Handling Missing Values
 4. Feature Selection
 5. Train-Test Split
-6. Model Training using Logistic Regression
+6. Model Training using SVM
 7. Model Evaluation
 8. Prediction on New Data
 
@@ -31,7 +31,7 @@ The goal of this project is to build a classification model using Logistic Regre
 * Data preprocessing and cleaning
 * Exploratory Data Analysis (EDA)
 * Missing value handling
-* Logistic Regression model training
+* SVM model training
 * Accuracy evaluation
 * Diabetes prediction for new patient records
 
@@ -39,10 +39,13 @@ The goal of this project is to build a classification model using Logistic Regre
 
 The dataset contains patient health information including:
 
+* Pregnancy
 * Glucose Level
 * Blood Pressure
+* Skin Thickness
+* Insulin
 * BMI
-* Insulin Level
+* Diabetes Pedigree Function
 * Age
 * Diabetes Outcome
 
